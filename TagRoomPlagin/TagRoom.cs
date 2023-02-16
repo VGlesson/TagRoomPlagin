@@ -46,7 +46,7 @@ namespace TagRoomPlagin
                 Element e = doc.GetElement(roomId);
                 Room r = e as Room;
                 string levelName = r.Level.Name.Substring(6);
-                r.Name = $"{levelName}_{r.Number}";
+                r.Name = $"{levelName}/{r.Number}";
 
                 doc.Create.NewRoomTag(new LinkElementId(roomId), new UV(0, 0), null);
             }
